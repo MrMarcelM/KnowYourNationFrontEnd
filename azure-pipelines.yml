@@ -14,15 +14,6 @@ steps:
   inputs:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
-steps:
-- task: PublishPipelineArtifact@0
-  inputs:
-    artifactName: 'frontEnd'
-    targetPath: 'src/MyWebApp/bin/Release/netcoreapp2.0/linux-x64/publish'
-  steps:
-  task: DownloadPipelineArtifact@0
-  inputs:
-    targetPath: $(System.DefaultWorkingDirectory)
 
 - script: |
     npm install
