@@ -17,5 +17,6 @@ steps:
 
 - script: |
     npm install
+    npm uninstall jest
     npm run build
   displayName: 'npm install and build'
